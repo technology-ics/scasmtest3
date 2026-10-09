@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14263b">
+  <meta name="description" content="Search and browse the 37th Singapore Cardiac Society Annual Scientific Meeting programme, 17–19 April 2026.">
+  <title>Scientific Programme | SCS ASM 2026</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to programme</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="./index.html" aria-label="SCS ASM 2026 programme home">
+          <span class="brand-word"><strong>SCS ASM <span>2026</span></strong><small>Singapore Cardiac Society</small></span>
+        </a>
+        <a class="official-link" href="https://scsasm.org/" target="_blank" rel="noopener noreferrer">Conference website <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="container hero-inner">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> 37th Annual Scientific Meeting</div>
+          <h1 id="page-title">Scientific <em>Programme</em></h1>
+          <p class="hero-subtitle">From prevention to precision: the future of cardiovascular medicine.</p>
+          <div class="event-facts" aria-label="Conference information">
+            <span><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></svg>17–19 April 2026</span>
+            <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Grand Copthorne Waterfront, Singapore</span>
+            <span class="timezone-chip">All times SGT (UTC+8)</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="container app-content">
+        <section class="search-panel" aria-label="Search and filter programme">
+          <form id="search-form" role="search" autocomplete="off">
+            <label class="input-label" for="search-input">Find a session, speaker or presentation</label>
+            <div class="search-input-wrap">
+              <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.9" cy="10.9" r="6.9"/><path d="m16 16 5 5"/></svg>
+              <input id="search-input" type="search" placeholder="Try “heart failure”, “S02”, or a speaker’s name" aria-describedby="search-hint">
+              <button id="clear-search" class="clear-search" type="button" aria-label="Clear search" hidden>Clear <span aria-hidden="true">×</span></button>
+            </div>
+            <p class="search-hint" id="search-hint">Searches all three days unless you select a specific day.</p>
+          </form>
+          <div class="filters" aria-label="Programme filters">
+            <div class="filter-item"><label for="track-filter">Track</label><select id="track-filter"><option value="">All tracks</option></select></div>
+            <div class="filter-item"><label for="room-filter">Room</label><select id="room-filter"><option value="">All rooms</option></select></div>
+            <div class="filter-item"><label for="type-filter">Presentation type</label><select id="type-filter"><option value="">All types</option></select></div>
+            <button id="clear-filters" class="reset-button" type="button">Clear all filters</button>
+          </div>
+          <div id="active-filters" class="active-filters" aria-label="Active filters" hidden></div>
+        </section>
+
+        <section class="programme" aria-labelledby="programme-heading">
+          <div class="section-intro">
+            <div><p class="section-kicker">Explore the meeting</p><h2 id="programme-heading">Conference schedule</h2></div>
+            <div class="programme-tools">
+              <button id="refresh-button" class="tool-button" type="button" aria-label="Refresh programme" title="Fetch latest published spreadsheet"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.8 9a7 7 0 0 1 11.7-1.7L20 12M4 12l1.5 4.7A7 7 0 0 0 17.3 15"/></svg><span>Refresh programme</span></button>
+            </div>
+          </div>
+          <div id="data-notice" role="status" aria-live="polite" class="data-notice" hidden></div>
+          <nav class="day-tabs" aria-label="Conference day">
+            <div id="day-buttons" class="day-buttons"></div>
+          </nav>
+          <div class="results-bar">
+            <p id="result-count" aria-live="polite" aria-atomic="true">Loading programme…</p>
+            <div class="view-switch" role="group" aria-label="Programme view">
+              <button type="button" id="agenda-button" class="view-button is-active" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h1M3 12h1M3 18h1"/></svg>Agenda</button>
+              <button type="button" id="timetable-button" class="view-button" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 10h18M10 10v11M16 10v11"/></svg>Timetable</button>
+            </div>
+          </div>
+          <div id="programme-output" aria-busy="true"><div class="loading-state"><span class="spinner" aria-hidden="true"></span><strong>Loading the scientific programme…</strong><p>Retrieving the latest published conference data.</p></div></div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><span>SCS ASM 2026 · 17–19 April · Singapore</span><span>Programme sourced from the published scientific schedule. <a href="https://scsasm.org/" target="_blank" rel="noopener noreferrer">Official conference website ↗</a></span></div></footer>
+  </div>
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-layout">
+      <div class="dialog-topbar"><span class="dialog-overline">SCS ASM 2026 · Programme detail</span><button id="close-dialog" type="button" class="dialog-close" aria-label="Close programme details">×</button></div>
+      <div id="dialog-content" class="dialog-content"></div>
+    </div>
+  </dialog>
+</body>
+</html>
